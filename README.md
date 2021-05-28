@@ -1,2 +1,2 @@
 # siteProject
-First Project(react + redux + react-router)
+First Project(react  + react-router)
