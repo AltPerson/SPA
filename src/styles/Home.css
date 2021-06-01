@@ -1,0 +1,20 @@
+.home-inner {
+  font-size: 50px;
+}
+
+.home-inner__title {
+  margin-top: 100px;
+}
+
+.home-inner__info {
+  margin-top: 20px;
+}
+
+.home {
+  height: 100vh;
+  background-image: url("../img/home-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: white;
+}
