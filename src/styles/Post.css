@@ -1,0 +1,25 @@
+.post {
+  flex: 0 1 auto;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.post:hover {
+  transform: scale(1.2);
+}
+
+.post__image {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 25%;
+}
+
+.post__title {
+  font-size: 20px;
+}
+
+.post__description {
+  font-size: 18px;
+}
