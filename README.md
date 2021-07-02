@@ -1,6 +1,6 @@
 # siteProject
-First Project(react  + react-router + redux)
-#URL:https://altperson.github.io/siteProject/
-#BRANCHES:
-MASTER - Source code of Project
-GH-PAGES - Builded version
+<br>First Project(react  + react-router + redux)
+<br>#URL:https://altperson.github.io/siteProject/
+<br>#BRANCHES:
+<br>MASTER - Source code of Project
+<br>GH-PAGES - Builded version
