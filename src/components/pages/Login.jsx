@@ -4,14 +4,23 @@ import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { setAuth } from "../../reducers/authReducer.js";
 
-function registerFunc(login, password, setShowCredits) {
+function registerFunc(login, password, setShowCredits, setLogin, setPassword) {
   localStorage.setItem("login", login);
   localStorage.setItem("password", password);
-  document.location.reload();
   setShowCredits(true);
+  setLogin("");
+  setPassword("");
   setTimeout(() => {
     setShowCredits(false);
   }, 5000);
+}
+
+function clearCreds(dispatch, setLogin, setPassword) {
+  localStorage.setItem("login", "");
+  localStorage.setItem("password", "");
+  setLogin("");
+  setPassword("");
+  dispatch(setAuth(false));
 }
 
 function checkAuth(
@@ -33,7 +42,7 @@ function checkAuth(
       setLogin("");
       setPassword("");
       setAuthError(false);
-    }, 2000);
+    }, 1000);
   }
 }
 
@@ -60,24 +69,37 @@ function Login() {
           value={password}
         />
         {localStorage.getItem("login") && localStorage.getItem("password") ? (
+          <>
+            <button
+              onClick={() =>
+                checkAuth(
+                  login,
+                  password,
+                  dispatch,
+                  setAuthError,
+                  setLogin,
+                  setPassword
+                )
+              }
+              className="login-submit"
+            >
+              Access
+            </button>
+            <button onClick={() => clearCreds(dispatch, setLogin, setPassword)}>
+              Clear Credentials
+            </button>
+          </>
+        ) : (
           <button
             onClick={() =>
-              checkAuth(
+              registerFunc(
                 login,
                 password,
-                dispatch,
-                setAuthError,
+                setShowCredits,
                 setLogin,
                 setPassword
               )
             }
-            className="login-submit"
-          >
-            Access
-          </button>
-        ) : (
-          <button
-            onClick={() => registerFunc(login, password, setShowCredits)}
             className="login-submit"
           >
             Register
@@ -85,7 +107,8 @@ function Login() {
         )}
         {showCredits ? (
           <div className="tip">
-            Login:{login} Password:{password}
+            Login:{localStorage.getItem("login")} Password:
+            {localStorage.getItem("password")}
           </div>
         ) : (
           ""
