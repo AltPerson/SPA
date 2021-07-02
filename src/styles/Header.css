@@ -8,6 +8,15 @@
   justify-content: space-around;
 }
 
+@media screen and (max-width: 408px) {
+  .navigation-list {
+    flex-direction: column;
+  }
+  .navigation-list__item {
+    margin-bottom: 10px;
+  }
+}
+
 .navigation-list__item {
   transition: all 0.3s ease-in-out;
 }

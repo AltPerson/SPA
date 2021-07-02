@@ -1,0 +1,46 @@
+.profile {
+  height: 100vh;
+  background-image: url("../img/profile-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: white;
+}
+
+.profile::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.profile-inner {
+  margin-top: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.profile__img {
+  border-radius: 40%;
+  object-fit: cover;
+  border: 1px solid black;
+}
+
+.profile-content {
+  display: flex;
+  margin-left: 50px;
+  justify-content: center;
+}
+
+.profile-description {
+  align-self: center;
+  margin-left: 10px;
+  font-size: 30px;
+  position: relative;
+  color: black;
+}

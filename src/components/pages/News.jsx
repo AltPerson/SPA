@@ -6,11 +6,11 @@ import "../../styles/News.css";
 function News() {
   return (
     <div className="news">
-      <Header />
+      <Header className="header" />
       <div className="news-inner">
-        <Posts />
+        <Posts className="header" />
       </div>
-      <Footer />
+      <Footer className="footer" />
     </div>
   );
 }

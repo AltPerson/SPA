@@ -1,0 +1,31 @@
+.login {
+  height: 100vh;
+  background-image: url("../img/login-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-name,
+.login-password,
+.login-submit {
+  margin-bottom: 20px;
+}
+
+.Error {
+  font-weight: 900;
+  text-shadow: 4px 4px 4px black;
+}
+
+.tip {
+  font-size: 30px;
+}

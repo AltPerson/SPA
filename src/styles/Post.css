@@ -5,15 +5,15 @@
   cursor: pointer;
 }
 
-.post:hover {
-  transform: scale(1.2);
-}
-
 .post__image {
   width: 250px;
   height: 250px;
   object-fit: cover;
   border-radius: 25%;
+}
+
+.post__image:hover {
+  border: 2px solid white;
 }
 
 .post__title {

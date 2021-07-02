@@ -1,10 +1,21 @@
 .news {
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
   background-image: url("../img/news.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   color: white;
+  position: relative;
+}
+.news-inner {
+  margin: 15% 0;
+}
+@media screen and (max-width: 1400px) {
+  .news-inner {
+    margin: 5% 0;
+  }
 }
 
 .news::after {
@@ -42,4 +53,5 @@ a {
   z-index: 2;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }

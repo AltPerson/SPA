@@ -1,4 +1,4 @@
-.container {
+.app-container {
   margin: 0;
   text-align: center;
   padding: 0;
@@ -7,4 +7,15 @@
 * {
   margin: 0;
   padding: 0;
+}
+
+a:-webkit-any-link {
+  outline: none;
+  text-decoration: none;
+  color: white;
+}
+
+a:-webkit-any-link:hover {
+  text-decoration: none;
+  color: white;
 }
