@@ -1,4 +1,4 @@
-#Website with Authetication<br>
+# Website with Authetication<br>
 ## DESCRIPTION<br>
 Website with authetication, which restricts access to profile page without passed authetication<br>
 ## USED TECHNIQUES<br>
